@@ -1,4 +1,4 @@
-# WIREGUARD NETWORK
+# WIREGUARD
 
 ## Introduction
 
