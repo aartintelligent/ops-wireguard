@@ -12,11 +12,21 @@ Le réseau VPN configuré permettra aux clients de communiquer de manière sécu
 inclut toutes les étapes nécessaires, y compris la configuration des fichiers, l'activation des services, et la gestion
 des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
+## START STACK
+
+ ```shell
+vagrant up
+```
+
 ## SERVER
 
 ### Configuration du serveur WireGuard
 
 1. Créez ou éditez le fichier de configuration du serveur WireGuard :
+
+   ```shell
+    vagrant ssh vpn-server
+    ```
 
     ```shell
     sudo nano /etc/wireguard/wg0.conf
@@ -148,6 +158,10 @@ des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
 1. Créez ou éditez le fichier de configuration pour le peer 1 :
 
+   ```shell
+    vagrant ssh vpn-peer-01
+    ```
+
     ```shell
     sudo nano /etc/wireguard/wg0.conf
     ```
@@ -185,6 +199,10 @@ des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
 1. Créez ou éditez le fichier de configuration pour le peer 2 :
 
+   ```shell
+    vagrant ssh vpn-peer-02
+    ```
+   
     ```shell
     sudo nano /etc/wireguard/wg0.conf
     ```
