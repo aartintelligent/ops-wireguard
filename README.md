@@ -32,6 +32,8 @@ Garantir une connexion stable et fiable entre les serveurs pour assurer une gest
 
 Permettre au serveur maître de gérer et superviser les serveurs esclaves comme s'ils étaient sur le même réseau local.
 
+**Schématisation**
+
 ![alt text](./docs/exemple.drawio.png)
 
 **Effecttuer des tests en local**
