@@ -13,7 +13,7 @@ sudo nano /etc/wireguard/wg0.conf
 Address = 10.200.0.1/16
 ListenPort = 51194
 PrivateKey = CB6ZXAQAga4CkkJavjqNBbr40dvDdrziSV2rfNm9WFo=
-SaveConfig = false
+SaveConfig = true
 PostUp = /etc/wireguard/post_up.sh
 PostDown = /etc/wireguard/post_down.sh
 
