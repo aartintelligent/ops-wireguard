@@ -67,7 +67,7 @@ vagrant destroy -f
     Address = 10.100.0.1/16
     ListenPort = 51194
     PrivateKey = CB6ZXAQAga4CkkJavjqNBbr40dvDdrziSV2rfNm9WFo=
-    SaveConfig = true
+    SaveConfig = false
     PostUp = /etc/wireguard/post_up.sh
     PostDown = /etc/wireguard/post_down.sh
 
