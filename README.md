@@ -12,7 +12,7 @@ des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
 #### Exemple de cas d'usage
 
-![alt text](./docs/cas-usage.drawio.png)
+![alt text](./docs/exemple.png)
 
 ## Environnement de test
 
