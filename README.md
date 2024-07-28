@@ -12,8 +12,6 @@ Le réseau VPN configuré permettra aux clients de communiquer de manière sécu
 inclut toutes les étapes nécessaires, y compris la configuration des fichiers, l'activation des services, et la gestion
 des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
-Site de référence https://www.wireguard.com
-
 ## SERVER
 
 ### Configuration du serveur WireGuard
