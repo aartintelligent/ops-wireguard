@@ -3,8 +3,8 @@
     {
       "name": "vpn-server",
       "box": "debian/bookworm64",
-      "memory": "2048",
-      "cpus": "1",
+      "memory": "4096",
+      "cpus": "2",
       "ips": [
         "192.168.56.10"
       ]
@@ -12,8 +12,8 @@
     {
       "name": "vpn-peer-01",
       "box": "debian/bookworm64",
-      "memory": "2048",
-      "cpus": "1",
+      "memory": "4096",
+      "cpus": "2",
       "ips": [
         "192.168.56.20"
       ]
@@ -21,8 +21,8 @@
     {
       "name": "vpn-peer-02",
       "box": "debian/bookworm64",
-      "memory": "2048",
-      "cpus": "1",
+      "memory": "4096",
+      "cpus": "2",
       "ips": [
         "192.168.56.30"
       ]
