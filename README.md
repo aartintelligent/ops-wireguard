@@ -10,13 +10,13 @@ Le réseau VPN configuré permettra aux clients de communiquer de manière sécu
 inclut toutes les étapes nécessaires, y compris la configuration des fichiers, l'activation des services, et la gestion
 des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
-## START STACK
+## Environnement de test
 
  ```shell
 vagrant up
 ```
 
-## SERVER
+## Serveur
 
 ### Configuration du serveur WireGuard
 
@@ -150,7 +150,7 @@ vagrant up
     sudo systemctl start wg-quick@wg0
     ```
 
-## PEERS
+## Peers
 
 ### PEER 1
 
