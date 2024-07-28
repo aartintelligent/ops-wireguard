@@ -176,7 +176,7 @@ vagrant destroy -f
 
 6. Activer et démarrer le service WireGuard :
 
-    ```shell
+    ```text
     sudo systemctl enable wg-quick@wg0
    
     sudo systemctl start wg-quick@wg0
