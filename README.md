@@ -34,7 +34,7 @@ Permettre au serveur maître de gérer et superviser les serveurs esclaves comme
 
 ![alt text](./docs/exemple.drawio.png)
 
-## Environnement test
+**Effecttuer des tests en local**
 
 Pour le lancer
 
