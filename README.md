@@ -38,13 +38,9 @@ Permettre au serveur maître de gérer et superviser les serveurs esclaves comme
 
 **Effecttuer des tests en local**
 
-Pour le lancer
-
  ```shell
 vagrant up
 ```
-
-Pour l'arrêter
 
  ```shell
 vagrant destroy -f
