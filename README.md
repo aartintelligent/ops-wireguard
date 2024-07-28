@@ -236,7 +236,7 @@ vagrant up
 
 ## Firewall
 
-Exemples de configuration de firewall UFW
+Exemples de configurations
 
 ```text
 # default
