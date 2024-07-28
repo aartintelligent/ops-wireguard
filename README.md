@@ -264,7 +264,7 @@ sudo reboot
 ```
 
 ```text
-# Http/Https
+# http/https
 sudo ufw default deny incoming
 sudo ufw allow proto tcp to any port 80
 sudo ufw allow proto tcp to any port 443
@@ -278,7 +278,7 @@ sudo reboot
 ```
 
 ```text
-# Nfs
+# nfs
 sudo ufw default deny incoming
 sudo ufw allow proto tcp to any port 2049
 sudo ufw allow proto udp to any port 51194
