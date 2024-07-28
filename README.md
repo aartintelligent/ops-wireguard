@@ -10,7 +10,27 @@ Le réseau VPN configuré permettra aux clients de communiquer de manière sécu
 inclut toutes les étapes nécessaires, y compris la configuration des fichiers, l'activation des services, et la gestion
 des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
-#### Exemple de cas d'usage
+#### Cas d'usage: 
+
+Interconnecter des serveurs Proxmox via un Tunnel VPN sécurisé
+
+**Contexte**
+
+Dans cette infrastructure, nous avons plusieurs serveurs Proxmox situés dans des réseaux différents. Pour garantir une communication sécurisée et fiable entre ces serveurs, un tunnel VPN est mis en place. Ce tunnel VPN permet de connecter le serveur Proxmox maître (localisé dans le réseau interne) avec deux serveurs Proxmox esclaves (localisés dans un réseau externe).
+
+**Objectifs**
+
+**Sécuriser la communication**
+
+Assurer que toutes les données échangées entre le serveur maître et les serveurs esclaves sont chiffrées et protégées contre les interceptions.
+
+**Fiabilité**
+
+Garantir une connexion stable et fiable entre les serveurs pour assurer une gestion efficace des machines virtuelles.
+
+**Facilité de gestion**
+
+Permettre au serveur maître de gérer et superviser les serveurs esclaves comme s'ils étaient sur le même réseau local.
 
 ![alt text](./docs/exemple.drawio.png)
 
