@@ -1,8 +1,6 @@
-# WIREGUARD
+# OPS WIREGUARD
 
 ## Introduction
-
-
 
 Ce projet décrit la configuration d'un réseau privé virtuel (VPN) utilisant WireGuard, un outil VPN moderne et
 performant. WireGuard est réputé pour sa simplicité, sa sécurité et sa rapidité. Ce guide couvre la configuration d'un
