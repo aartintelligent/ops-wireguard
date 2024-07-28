@@ -34,7 +34,7 @@ Permettre au serveur maître de gérer et superviser les serveurs esclaves comme
 
 ![alt text](./docs/exemple.drawio.png)
 
-## Environnement de test
+## Environnement test
 
 Pour le lancer
 
@@ -320,4 +320,10 @@ sudo ufw allow from 192.168.56.0/24
 sudo ufw --force enable
 
 sudo reboot
+```
+
+```shell
+PRIVATE_KEY=$(wg genkey)
+PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
+echo "$PRIVATE_KEY / $PUBLIC_KEY"
 ```
