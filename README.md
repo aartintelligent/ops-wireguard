@@ -233,3 +233,59 @@ vagrant up
     ```shell
     ping -c 4 10.200.0.1
     ```
+
+## Firewall
+
+Exemples de configuration de firewall UFW
+
+```text
+# default
+sudo ufw default deny incoming
+sudo ufw allow proto udp to any port 51194
+sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 192.168.56.0/24
+
+sudo ufw --force enable
+
+sudo reboot
+```
+
+```text
+# ssh
+sudo ufw default deny incoming
+sudo ufw allow proto tcp to any port 22
+sudo ufw allow proto udp to any port 51194
+sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 192.168.56.0/24
+
+sudo ufw --force enable
+
+sudo reboot
+```
+
+```text
+# Http/Https
+sudo ufw default deny incoming
+sudo ufw allow proto tcp to any port 80
+sudo ufw allow proto tcp to any port 443
+sudo ufw allow proto udp to any port 51194
+sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 192.168.56.0/24
+
+sudo ufw --force enable
+
+sudo reboot
+```
+
+```text
+# Nfs
+sudo ufw default deny incoming
+sudo ufw allow proto tcp to any port 2049
+sudo ufw allow proto udp to any port 51194
+sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 192.168.56.0/24
+
+sudo ufw --force enable
+
+sudo reboot
+```

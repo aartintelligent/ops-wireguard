@@ -25,6 +25,7 @@ Vagrant.configure("2") do |config|
         apt-get install -y \
             ca-certificates \
             wireguard \
+            ufw \
             curl
 
         apt-get upgrade -y
