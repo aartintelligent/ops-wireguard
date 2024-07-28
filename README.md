@@ -12,8 +12,16 @@ des règles de pare-feu pour assurer une communication fluide et sécurisée.
 
 ## Environnement de test
 
+Pour le lancer
+
  ```shell
 vagrant up
+```
+
+Pour l'arrêter
+
+ ```shell
+vagrant destroy -f
 ```
 
 ## Serveur
@@ -34,7 +42,7 @@ vagrant up
     ### vpn-server
 
     [Interface]
-    Address = 10.200.0.1/16
+    Address = 10.100.0.1/16
     ListenPort = 51194
     PrivateKey = CB6ZXAQAga4CkkJavjqNBbr40dvDdrziSV2rfNm9WFo=
     SaveConfig = true
@@ -45,13 +53,13 @@ vagrant up
 
     [Peer]
     PublicKey = flau4eoBf6M+kC3VKP673mj1o+ZscTKpAKhaD3oJO3o=
-    AllowedIPs = 10.200.0.10/32
+    AllowedIPs = 10.100.0.10/32
 
     ### vpn-peer-02
 
     [Peer]
     PublicKey = yZQRPLyHmpfVwTSrsOVaR+E/e3UUoxkejE/V0K8gzmU=
-    AllowedIPs = 10.200.0.20/32
+    AllowedIPs = 10.100.0.20/32
     ```
 
 2. Créez le script `post_up.sh` :
@@ -66,7 +74,7 @@ vagrant up
 
     WIREGUARD_INTERFACE="wg0"
    
-    WIREGUARD_LAN="10.200.0.0/16"
+    WIREGUARD_LAN="10.100.0.0/16"
    
     MASQUERADE_INTERFACE="eth1"
    
@@ -115,7 +123,7 @@ vagrant up
 
     WIREGUARD_INTERFACE="wg0"
    
-    WIREGUARD_LAN="10.200.0.0/16"
+    WIREGUARD_LAN="10.100.0.0/16"
    
     MASQUERADE_INTERFACE="eth1"
    
@@ -168,13 +176,13 @@ vagrant up
     ### vpn-peer-01
 
     [Interface]
-    Address = 10.200.0.10/32
+    Address = 10.100.0.10/32
     PrivateKey = aMz7xx4aNS349Ksqa2Y60w7gtXeEFFFusioLMUdHYEg=
     ListenPort = 51194
 
     [Peer]
     PublicKey = vgR1t+KAyHkg68cPyJg2HxDSFucUmrS4apqD6P6x9lg=
-    AllowedIPs = 10.200.0.0/16
+    AllowedIPs = 10.100.0.0/16
     Endpoint = 192.168.56.10:51194
     PersistentKeepalive = 15
     ```
@@ -190,7 +198,7 @@ vagrant up
 3. Tester la connectivité :
 
     ```shell
-    ping -c 4 10.200.0.1
+    ping -c 4 10.100.0.1
     ```
 
 ### PEER 2
@@ -209,13 +217,13 @@ vagrant up
     ### vpn-peer-02
 
     [Interface]
-    Address = 10.200.0.20/32
+    Address = 10.100.0.20/32
     PrivateKey = YGKpOqVDr7ExB2UqFk2Gp57S4cwSPWmV50PfQ9Ib3G4=
     ListenPort = 51194
 
     [Peer]
     PublicKey = vgR1t+KAyHkg68cPyJg2HxDSFucUmrS4apqD6P6x9lg=
-    AllowedIPs = 10.200.0.0/16
+    AllowedIPs = 10.100.0.0/16
     Endpoint = 192.168.56.10:51194
     PersistentKeepalive = 15
     ```
@@ -231,7 +239,7 @@ vagrant up
 3. Tester la connectivité :
 
     ```shell
-    ping -c 4 10.200.0.1
+    ping -c 4 10.100.0.1
     ```
 
 ## Firewall
@@ -242,7 +250,7 @@ Exemples de configurations
 # default
 sudo ufw default deny incoming
 sudo ufw allow proto udp to any port 51194
-sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 10.100.0.0/16
 sudo ufw allow from 192.168.56.0/24
 
 sudo ufw --force enable
@@ -255,7 +263,7 @@ sudo reboot
 sudo ufw default deny incoming
 sudo ufw allow proto tcp to any port 22
 sudo ufw allow proto udp to any port 51194
-sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 10.100.0.0/16
 sudo ufw allow from 192.168.56.0/24
 
 sudo ufw --force enable
@@ -269,7 +277,7 @@ sudo ufw default deny incoming
 sudo ufw allow proto tcp to any port 80
 sudo ufw allow proto tcp to any port 443
 sudo ufw allow proto udp to any port 51194
-sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 10.100.0.0/16
 sudo ufw allow from 192.168.56.0/24
 
 sudo ufw --force enable
@@ -282,7 +290,7 @@ sudo reboot
 sudo ufw default deny incoming
 sudo ufw allow proto tcp to any port 2049
 sudo ufw allow proto udp to any port 51194
-sudo ufw allow from 10.200.0.0/16
+sudo ufw allow from 10.100.0.0/16
 sudo ufw allow from 192.168.56.0/24
 
 sudo ufw --force enable
