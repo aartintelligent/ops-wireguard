@@ -321,9 +321,3 @@ sudo ufw --force enable
 
 sudo reboot
 ```
-
-```shell
-PRIVATE_KEY=$(wg genkey)
-PUBLIC_KEY=$(echo $PRIVATE_KEY | wg pubkey)
-echo "$PRIVATE_KEY / $PUBLIC_KEY"
-```
