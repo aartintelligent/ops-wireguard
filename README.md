@@ -53,7 +53,7 @@ vagrant destroy -f
 1. Créez ou éditez le fichier de configuration du serveur WireGuard :
 
    ```shell
-    vagrant ssh vpn-server
+    vagrant ssh proxmox-master
     ```
 
     ```shell
@@ -61,7 +61,7 @@ vagrant destroy -f
     ```
 
     ```text
-    ### vpn-server
+    ### proxmox-master
 
     [Interface]
     Address = 10.100.0.1/16
@@ -71,13 +71,13 @@ vagrant destroy -f
     PostUp = /etc/wireguard/post_up.sh
     PostDown = /etc/wireguard/post_down.sh
 
-    ### vpn-peer-01
+    ### proxmox-slave-01
 
     [Peer]
     PublicKey = flau4eoBf6M+kC3VKP673mj1o+ZscTKpAKhaD3oJO3o=
     AllowedIPs = 10.100.0.10/32
 
-    ### vpn-peer-02
+    ### proxmox-slave-02
 
     [Peer]
     PublicKey = yZQRPLyHmpfVwTSrsOVaR+E/e3UUoxkejE/V0K8gzmU=
@@ -187,7 +187,7 @@ vagrant destroy -f
 1. Créez ou éditez le fichier de configuration pour le peer 1 :
 
    ```shell
-    vagrant ssh vpn-peer-01
+    vagrant ssh proxmox-slave-01
     ```
 
     ```shell
@@ -195,7 +195,7 @@ vagrant destroy -f
     ```
 
     ```text
-    ### vpn-peer-01
+    ### proxmox-slave-01
 
     [Interface]
     Address = 10.100.0.10/32
@@ -205,7 +205,7 @@ vagrant destroy -f
     [Peer]
     PublicKey = vgR1t+KAyHkg68cPyJg2HxDSFucUmrS4apqD6P6x9lg=
     AllowedIPs = 10.100.0.0/16
-    Endpoint = 192.168.56.10:51194
+    Endpoint = 192.168.1.80:51194
     PersistentKeepalive = 15
     ```
 
@@ -228,7 +228,7 @@ vagrant destroy -f
 1. Créez ou éditez le fichier de configuration pour le peer 2 :
 
    ```shell
-    vagrant ssh vpn-peer-02
+    vagrant ssh proxmox-slave-02
     ```
    
     ```shell
@@ -236,7 +236,7 @@ vagrant destroy -f
     ```
 
     ```text
-    ### vpn-peer-02
+    ### proxmox-slave-02
 
     [Interface]
     Address = 10.100.0.20/32
@@ -246,7 +246,7 @@ vagrant destroy -f
     [Peer]
     PublicKey = vgR1t+KAyHkg68cPyJg2HxDSFucUmrS4apqD6P6x9lg=
     AllowedIPs = 10.100.0.0/16
-    Endpoint = 192.168.56.10:51194
+    Endpoint = 192.168.1.80:51194
     PersistentKeepalive = 15
     ```
 

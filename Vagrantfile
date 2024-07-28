@@ -14,8 +14,10 @@ Vagrant.configure("2") do |config|
 
       machine_config.vm.hostname = machine['name']
 
-      machine['ips'].each do |ip|
-        machine_config.vm.network "private_network", ip: ip
+      if machine['public_ips'].is_a?(Array)
+        machine['public_ips'].each do |public_ip|
+            machine_config.vm.network "public_network", ip: public_ip['ip'], bridge: public_ip['bridge']
+        end
       end
 
       machine_config.vm.provision "shell", inline: <<-SHELL

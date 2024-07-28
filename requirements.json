@@ -1,30 +1,39 @@
 {
   "machines": [
     {
-      "name": "vpn-server",
+      "name": "proxmox-master",
       "box": "debian/bookworm64",
       "memory": "4096",
       "cpus": "2",
-      "ips": [
-        "192.168.56.10"
+      "public_ips": [
+        {
+          "ip": "192.168.1.80",
+          "bridge": "enp4s0"
+        }
       ]
     },
     {
-      "name": "vpn-peer-01",
+      "name": "proxmox-slave-01",
       "box": "debian/bookworm64",
       "memory": "4096",
       "cpus": "2",
-      "ips": [
-        "192.168.56.20"
+      "public_ips": [
+        {
+          "ip": "192.168.1.90",
+          "bridge": "enp4s0"
+        }
       ]
     },
     {
-      "name": "vpn-peer-02",
+      "name": "proxmox-slave-02",
       "box": "debian/bookworm64",
       "memory": "4096",
       "cpus": "2",
-      "ips": [
-        "192.168.56.30"
+      "public_ips": [
+        {
+          "ip": "192.168.1.100",
+          "bridge": "enp4s0"
+        }
       ]
     }
   ]
