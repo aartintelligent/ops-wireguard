@@ -39,10 +39,17 @@ Vagrant.configure("2") do |config|
       end
 
       machine_config.vm.provider "virtualbox" do |vb|
+
         vb.gui = false
+
         vb.name = machine['name']
+
         vb.memory = machine['memory']
+
         vb.cpus = machine['cpus']
+
+        vb.customize ["modifyvm", :id, "--nested-hw-virt", "on"]
+
       end
 
     end
